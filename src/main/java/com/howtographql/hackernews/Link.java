@@ -1,3 +1,5 @@
+package com.howtographql.hackernews;
+
 public class Link {
 
     private final String id; //the new field
