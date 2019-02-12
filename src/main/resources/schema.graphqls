@@ -19,7 +19,17 @@ type Mutation {
   createUser(name: String!, authProvider: AuthData!): User
   createLink(url: String!, description: String!): Link
   signinUser(auth: AuthData): SigninPayload
+  createVote(linkId: ID, userId: ID): Vote
 }
+
+type Vote {
+    id: ID!
+    createdAt: DateTime!
+    user: User!
+    link: Link!
+}
+
+scalar DateTime
 
 type User {
   id: ID!
